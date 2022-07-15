@@ -1,4 +1,17 @@
-<hello name="{{ name }}"></hello>
 <p>
-  Start editing to see some magic happen :)
+  Your name: {{ name }}
 </p>
+
+<input type="text" [(ngModel)]="name">
+
+<!-- cách viết đầy đủ 
+  <input type="text" [ngModel]="name" (ngModelChange)="name = $event">
+-->
+
+<p>
+  Eq:
+</p>
+<input type="text" [ngModel]="name" (ngModelChange)="name = $event">
+
+
+<app-toggle [(checked)]="checked"></app-toggle>
